@@ -1,2 +1,20 @@
-<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
-<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<t4jnt = 'http://www.jahia.org/jahia/t4jnt/1.0'>
+<t4jmix = 'http://www.jahia.org/jahia/t4jmix/1.0'>
+
+[t4jnt:imageRef] > jnt:content, jmix:nodeReference, jmix:multimediaContent, jmix:editorialContent, mix:title
+ - image (weakreference, picker[type='image']) internationalized < 'jmix:image'
+ - j:alternateText (string) internationalized
+
+[t4jmix:imgLink] mixin
+ extends = t4jnt:imageRef
+ - url (string) internationalized
+ - linkClasses (string)
+ - linkStyle (string)
+ - linkTarget (string, choicelist[resourceBundle]) nofulltext < '_blank','_parent','_self','_top'
+
+[t4jmix:imgCustomisation] mixin
+ extends = t4jnt:imageRef
+ - j:classes (string)
+ - j:style (string)
+ - width (string) = '100%'
+ - height (string)

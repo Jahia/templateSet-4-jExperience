@@ -1,0 +1,32 @@
+{
+  "name": "t4jmix:imgCustomisation",
+  "description": "Specify custom attributes for the img tag",
+  "priority": 2.0,
+  "rank": 2.0,
+  "fields": [
+    {
+      "name": "j:classes",
+      "target": {
+        "rank": 1.0
+      }
+    },
+    {
+      "name": "j:style",
+      "target": {
+        "rank": 2.0
+      }
+    },
+    {
+      "name": "width",
+      "target": {
+        "rank": 3.0
+      }
+    },
+    {
+      "name": "height",
+      "target": {
+        "rank": 4.0
+      }
+    }
+  ]
+}
