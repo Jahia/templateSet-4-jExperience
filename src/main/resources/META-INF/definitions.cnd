@@ -7,7 +7,7 @@
 
 [t4jmix:imgLink] mixin
  extends = t4jnt:imageRef
- - url (string)
+ - url (string) internationalized
  - linkClasses (string)
  - linkStyle (string)
  - linkTarget (string, choicelist[resourceBundle]) nofulltext < '_blank','_parent','_self','_top'
