@@ -1,0 +1,32 @@
+{
+  "name": "t4jmix:imgLink",
+  "description": "Make this image a link",
+  "priority": 1.0,
+  "rank": 1.0,
+  "fields": [
+    {
+      "name": "url",
+      "target": {
+        "rank": 1.0
+      }
+    },
+    {
+      "name": "linkTarget",
+      "target": {
+        "rank": 2.0
+      }
+    },
+    {
+      "name": "linkClasses",
+      "target": {
+        "rank": 3.0
+      }
+    },
+    {
+      "name": "linkStyle",
+      "target": {
+        "rank": 4.0
+      }
+    }
+  ]
+}

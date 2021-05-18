@@ -1,0 +1,17 @@
+{
+  "nodeType": "t4jnt:imageRef",
+  "priority": 1.0,
+  "hasPreview": true,
+  "sections": [
+    {
+      "name": "content",
+      "labelKey": "label.engineTab.content",
+      "requiredPermission": "viewContentTab"
+    },
+    {
+      "name": "options",
+      "labelKey": "label.engineTab.options",
+      "requiredPermission": "viewOptionsTab"
+    }
+  ]
+}
