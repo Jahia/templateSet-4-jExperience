@@ -41,8 +41,8 @@
 <body>
 <h1>Et voila !</h1>
 <div class="bodywrapper"><!--start bodywrapper-->
-
-    <iframe id="jExpCodeSnippet" src="${url.context}/cms/editframe/default/${renderContext.UILocale.language}/sites/${renderContext.site.siteKey}.tracking-30-information.html"
+<%--    ${renderContext.UILocale.language}--%>
+    <iframe id="jExpCodeSnippet" src="${url.context}/cms/editframe/default/en/sites/${renderContext.site.siteKey}.tracking-30-information.html"
             style="display: block;visibility:hidden;" frameBorder="0" width="100%" height="100%" onload="myFunction()"></iframe>
 
     <template:area path="pagecontent"/>
