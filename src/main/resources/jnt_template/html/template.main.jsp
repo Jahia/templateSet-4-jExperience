@@ -22,10 +22,28 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>${fn:escapeXml(renderContext.mainResource.node.displayableName)}</title>
 </head>
+<script type="text/javascript">
+    const myFunction= () => {
+        const iframe = document.getElementById("jExpCodeSnippet");
+        let elmnt = iframe.contentWindow.document.getElementsByTagName("body")[0];
+        const form = iframe.contentWindow.document.forms["trackingInformationCtrl.settingsForm"];
+
+        const newBody = document.createElement("body");
+        newBody.append(form);
+        <%--newBody.innerHTML = "${currentNode.properties['description'].string}";--%>
+        elmnt.replaceWith(newBody);
+
+        iframe.style.visibility = "visible";
+
+    }
+</script>
 
 <body>
 <h1>Et voila !</h1>
 <div class="bodywrapper"><!--start bodywrapper-->
+
+    <iframe id="jExpCodeSnippet" src="${url.context}/cms/editframe/default/${renderContext.UILocale.language}/sites/${renderContext.site.siteKey}.tracking-30-information.html"
+            style="display: block;visibility:hidden;" frameBorder="0" width="100%" height="100%" onload="myFunction()"></iframe>
 
     <template:area path="pagecontent"/>
 </div>
