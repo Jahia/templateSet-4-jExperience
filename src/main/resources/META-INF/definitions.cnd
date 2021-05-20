@@ -23,5 +23,5 @@
  - height (string)
 
 [t4jnt:doc] > jnt:content, jmix:basicContent, jmix:editorialContent, mix:title
- - content (string, richtext)
+ - content (string, richtext[ckeditor.toolbar='Tinny',ckeditor.customConfig='$context/modules/templateSet-4-jExperience/javascript/ckeditor/config/default.js'])
 

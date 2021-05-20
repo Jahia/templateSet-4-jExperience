@@ -17,11 +17,16 @@
 <head>
     <title>${fn:escapeXml(renderContext.mainResource.node.displayableName)}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap"
+    />
     <%--<c:if test="${renderContext.editMode}">--%>
     <%--    <template:addResources type="css" resources="edit.css" />--%>
     <%--</c:if>--%>
-    <%--<template:addResources type="css" resources="960.css,01web.css"/>--%>
+    <template:addResources type="css" resources="style.min.css"/>
     <%--<template:theme/>--%>
 </head>
 
