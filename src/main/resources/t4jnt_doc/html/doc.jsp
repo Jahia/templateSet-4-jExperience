@@ -4,7 +4,11 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="jcr" uri="http://www.jahia.org/tags/jcr" %>
+<%@ taglib prefix="ui" uri="http://www.jahia.org/tags/uiComponentsLib" %>
+<%@ taglib prefix="functions" uri="http://www.jahia.org/tags/functions" %>
+<%@ taglib prefix="query" uri="http://www.jahia.org/tags/queryLib" %>
 <%@ taglib prefix="utility" uri="http://www.jahia.org/tags/utilityLib" %>
+<%@ taglib prefix="s" uri="http://www.jahia.org/tags/search" %>
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="out" type="java.io.PrintWriter"--%>
 <%--@elvariable id="script" type="org.jahia.services.render.scripting.Script"--%>
@@ -13,19 +17,3 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
-<html lang="${fn:substring(renderContext.request.locale,0,2)}">
-<head>
-    <title>${fn:escapeXml(renderContext.mainResource.node.displayableName)}</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%--<c:if test="${renderContext.editMode}">--%>
-    <%--    <template:addResources type="css" resources="edit.css" />--%>
-    <%--</c:if>--%>
-    <%--<template:addResources type="css" resources="960.css,01web.css"/>--%>
-    <%--<template:theme/>--%>
-</head>
-
-<body>
-    <template:area path="pagecontent"/>
-</body>
-</html>
