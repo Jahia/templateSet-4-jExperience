@@ -66,7 +66,7 @@
   <properties>
     <jahia-module-signature>MCwCFCt/a2siFjl/7SkWHN45uKZ5AFGfAhR8F31Ba28EBdQpKWpUjTE42SqBcQ==</jahia-module-signature>
     <jahia-module-type>system</jahia-module-type>
-    <jahia-depends>default</jahia-depends>
+    <jahia-depends>default,jexperience</jahia-depends>
   </properties>
   <repositories>
     <repository>
