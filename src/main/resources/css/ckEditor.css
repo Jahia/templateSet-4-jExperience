@@ -8,16 +8,11 @@
   src: url("../../fonts/Lato-Bold.ttf") format("ttf");
   font-weight: 800;
 }
-img {
-  max-width: 100%;
-  margin: 8px 0;
-}
-
-.jtrial-listItems {
+.jtrial-main ul {
   padding-left: 18px;
 }
 
-.jtrial-listItem::marker {
+.jtrial-main li::marker {
   color: #00a0e3;
 }
 
@@ -58,5 +53,3 @@ img {
 .jtrial-link:hover {
   color: #286090;
 }
-
-/*# sourceMappingURL=ckEditor.css.map */
