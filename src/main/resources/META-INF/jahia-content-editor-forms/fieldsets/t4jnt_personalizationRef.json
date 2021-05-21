@@ -1,0 +1,15 @@
+{
+  "name": "t4jnt:personalizationRef",
+  "fields": [
+    {
+      "name": "personalization",
+      "selectorType": "Picker",
+      "selectorOptions":[
+        {
+          "name": "type",
+          "value" : "personalizedContent"
+        }
+      ]
+    }
+  ]
+}

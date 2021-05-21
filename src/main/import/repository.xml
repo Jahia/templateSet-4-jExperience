@@ -25,9 +25,7 @@
                <simple jcr:primaryType="jnt:pageTemplate"/>
                <headercontent jcr:mixinTypes="jmix:systemNameReadonly"
                               jcr:primaryType="jnt:contentList">
-                  <header-static-area j:allowedTypes=""
-                                      j:limitedAbsoluteAreaEdit="false"
-                                      jcr:primaryType="jnt:absoluteArea"/>
+                  <header-static-area j:limitedAbsoluteAreaEdit="false" jcr:primaryType="jnt:absoluteArea"/>
                </headercontent>
             </base>
             <content-template j:applyOn="jnt:content"
