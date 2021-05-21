@@ -15,17 +15,52 @@ CKEDITOR.editorConfig = function (config) {
     config.image_previewText = '';
 
     config.format_tags = 'h1;h2;h3;h4;h5;h6;p;pre;code';
+    config.format_h1 = {
+        name: 'Heading 1',
+        element: 'h1',
+        attributes: { class: 'jtrial-h1' },
+    };
+    config.format_h2 = {
+        name: 'Heading 2',
+        element: 'h2',
+        attributes: { class: 'jtrial-h2' },
+    };
+    config.format_h3 = {
+        name: 'Heading 3',
+        element: 'h3',
+        attributes: { class: 'jtrial-h3' },
+    };
+    config.format_h4 = {
+        name: 'Heading 4',
+        element: 'h4',
+        attributes: { class: 'jtrial-h4' },
+    };
+    config.format_h5 = {
+        name: 'Heading 5',
+        element: 'h5',
+        attributes: { class: 'jtrial-h5' },
+    };
+    config.format_pre = {
+        name: 'Block code',
+        element: 'pre',
+        attributes: { class: 'jtrial-pre' },
+    };
     config.format_code = {
-        name: 'code',
+        name: 'Inline code',
         element: 'code',
-        attributes: { class: 'editorCode' },
+        attributes: { class: 'jtrial-code' },
+    };
+    config.format_pre = {
+        name: 'Inline code',
+        element: 'pre',
+        attributes: { class: 'jtrial-pre' },
     };
 
     // config.templates = 'templateSet-4-jExperience,default';
     // config.stylesSet = 'B4:'+((typeof contextJsParameters != 'undefined') ? contextJsParameters.contextPath : '') + '/modules/templateSet-4-jExperience/javascript/ckeditor/stylesSet.js';
     config.contentsCss = [
         // ((typeof contextJsParameters != 'undefined') ? contextJsParameters.contextPath : '') + '/modules/bootstrap4-core/css/bootstrap.min.css',
-        ((typeof contextJsParameters != 'undefined') ? contextJsParameters.contextPath : '') + '/modules/templateSet-4-jExperience/css/style.min.css'
+        ((typeof contextJsParameters != 'undefined') ? contextJsParameters.contextPath : '') + '/modules/templateSet-4-jExperience/css/ckEditor.css'
     ];
     // config.templates_files = [
     //     ((typeof contextJsParameters != 'undefined') ? contextJsParameters.contextPath : '') + '/modules/templateSet-4-jExperience/javascript/ckeditor/templates.js',

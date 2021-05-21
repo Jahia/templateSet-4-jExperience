@@ -44,64 +44,57 @@
         please contact the sales department at sales@jahia.com.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>jahia-modules</artifactId>
-        <groupId>org.jahia.modules</groupId>
-        <version>8.0.2.0</version>
-    </parent>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
     <groupId>org.jahia.modules</groupId>
-    <artifactId>templateSet-4-jExperience</artifactId>
-    <name>TemplateSet for jExperience</name>
-    <version>1.0.0-SNAPSHOT</version>    
-    <packaging>bundle</packaging>
-    <description>This is the custom profile module (TemplateSet for jExperience) for running on a Jahia server.</description>
-
-    <scm>
-        <connection>scm:git:git@github.com:Jahia/templateSet-4-jExperience.git</connection>
-        <developerConnection>scm:git:git@github.com:Jahia/templateSet-4-jExperience.git</developerConnection>
-        <url>https://github.com/Jahia/templateSet-4-jExperience</url>
-    </scm>
-
-    <properties>
-        <jahia-module-type>system</jahia-module-type>
-        <jahia-depends>default</jahia-depends>
-        <jahia-module-signature>MCwCFCt/a2siFjl/7SkWHN45uKZ5AFGfAhR8F31Ba28EBdQpKWpUjTE42SqBcQ==</jahia-module-signature>
-    </properties>
-
-    <repositories>
-        <repository>
-            <id>jahia-public</id>
-            <name>Jahia Public Repository</name>
-            <url>https://devtools.jahia.com/nexus/content/groups/public</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <extensions>true</extensions>
-                <configuration>
-                    <instructions>
-                        <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
-                        <Jahia-Static-Resources>/css,/fonts,/javascript,/images,/icons,/img</Jahia-Static-Resources>
-<!--                        <Jahia-Depends>default</Jahia-Depends>-->
-                    </instructions>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <artifactId>jahia-modules</artifactId>
+    <version>8.0.2.0</version>
+  </parent>
+  <groupId>org.jahia.modules</groupId>
+  <artifactId>templateSet-4-jExperience</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>bundle</packaging>
+  <name>TemplateSet for jExperience</name>
+  <description>This is the custom profile module (TemplateSet for jExperience) for running on a Jahia server.</description>
+  <scm>
+    <connection>scm:git:git@github.com:Jahia/templateSet-4-jExperience.git</connection>
+    <developerConnection>scm:git:git@github.com:Jahia/templateSet-4-jExperience.git</developerConnection>
+    <url>https://github.com/Jahia/templateSet-4-jExperience</url>
+  </scm>
+  <properties>
+    <jahia-module-signature>MCwCFCt/a2siFjl/7SkWHN45uKZ5AFGfAhR8F31Ba28EBdQpKWpUjTE42SqBcQ==</jahia-module-signature>
+    <jahia-module-type>system</jahia-module-type>
+    <jahia-depends>default,jexperience</jahia-depends>
+  </properties>
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>jahia-public</id>
+      <name>Jahia Public Repository</name>
+      <url>https://devtools.jahia.com/nexus/content/groups/public</url>
+    </repository>
+  </repositories>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
+            <Jahia-Static-Resources>/css,/fonts,/javascript,/images,/icons,/img</Jahia-Static-Resources>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

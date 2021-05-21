@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
    <modules jcr:primaryType="jnt:modules">
-      <templateSet-4-jExperience j:dependencies="default"
+      <templateSet-4-jExperience j:dependencies="default jexperience"
                                  j:installedModules="templateSet-4-jExperience"
                                  j:modulePriority="0"
                                  j:moduleType="templatesSet"
@@ -23,6 +23,12 @@
                   jcr:primaryType="jnt:template">
                <home jcr:primaryType="jnt:pageTemplate"/>
                <simple jcr:primaryType="jnt:pageTemplate"/>
+               <headercontent jcr:mixinTypes="jmix:systemNameReadonly"
+                              jcr:primaryType="jnt:contentList">
+                  <header-static-area j:allowedTypes=""
+                                      j:limitedAbsoluteAreaEdit="false"
+                                      jcr:primaryType="jnt:absoluteArea"/>
+               </headercontent>
             </base>
             <content-template j:applyOn="jnt:content"
                               j:hiddenTemplate="true"

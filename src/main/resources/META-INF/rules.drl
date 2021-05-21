@@ -12,3 +12,12 @@ global User user
 global Service service
 global Logger logger
 global JCRContentUtils jcrUtils
+
+rule "Enable jExperience external site"
+    when
+        A new node is created
+            - it has the type jnt:virtualsite
+    then
+        Log "************ node " + node.getClass()
+        Add the type wemmix:externalSite
+end
