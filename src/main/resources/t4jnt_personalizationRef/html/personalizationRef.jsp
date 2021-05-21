@@ -17,4 +17,4 @@
 ${fn:escapeXml(code)}
 </pre>
 
-<button onclick="jtrialCopyMe('${targetId}')">Copy text</button>
+<button class="jtrial-button icon-copy" onclick="jtrialCopyMe('${targetId}')">Copy text</button>
