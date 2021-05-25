@@ -32,7 +32,7 @@
             // div.classList.add("jExpCodeSnippet-wrapper");
             div.setAttribute("id","jExpCodeSnippet-wrapper");
             div.style.overflow="hidden";
-            div.style.padding="20px";
+            div.style.padding="20px 0";
             div.style.background="#fff";
             div.append(textarea);
             div.append(btn);
