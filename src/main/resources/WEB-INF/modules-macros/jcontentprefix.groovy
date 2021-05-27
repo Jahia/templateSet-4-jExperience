@@ -1,0 +1,1 @@
+print "$url.context/jahia/jcontent/$renderContext.site.siteKey/$renderContext.mainResource.locale";
