@@ -31,6 +31,7 @@
             <template:addResources type="css" resources="edit.css"/>
         </c:if>
         <%--<template:theme/>--%>
+        <template:addResources type="javascript" resources="main.js" async="true"/>
     </head>
 
     <body>
@@ -40,6 +41,5 @@
         <main class="jtrial-main">
             <template:area path="pagecontent"/>
         </main>
-        <template:addResources type="javascript" resources="jtrail-jExp-main.js"/>
     </body>
 </html>

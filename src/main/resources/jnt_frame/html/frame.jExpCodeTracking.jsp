@@ -28,7 +28,7 @@
 
             <p>
                 <input type="checkbox" id="rememberme" name="useCookie"/>
-                <label for="rememberme" class="rememberLabel"><fmt:message key="loginForm.rememberMe.label"/></label>
+                <label for="rememberme" class="rememberLabel"><fmt:message key="jtrial.loginform.rememberMe.label"/></label>
 
             </p>
 
@@ -54,6 +54,20 @@
         const loadJExpCodeTracking= (iframe) => {
             //iframe contains script. we must wait until this script create the form element.
             // const iframe = document.getElementById("jExpCodeSnippet");
+
+            if(!iframe.contentWindow){
+                const h3 = document.createElement("h3");
+                h3.textContent="<fmt:message key="jtrial.iframe.noContent"/>";
+                iframe.replaceWith(h3);
+                return;
+            }
+
+            const issue = iframe.contentWindow.document.querySelector("h3[message-key='wem.error.apacheUnomi']");
+            if(issue){
+                iframe.replaceWith(issue);
+                return;
+            }
+
             let body = iframe.contentWindow.document.getElementsByTagName("body")[0];
 
             const updateBody= (iframe,body) => {
