@@ -4,39 +4,37 @@
 <%@ taglib prefix="ui" uri="http://www.jahia.org/tags/uiComponentsLib" %>
 
 <c:if test="${!renderContext.loggedIn || currentAliasUser.username eq 'guest'}">
-    <div class="jtrial-banner">
-        <ui:loginArea class="loginForm" onsubmit="loginButton.disabled = true; return true;">
-            <h3><fmt:message key="jtrial.loginform.title"/></h3>
-            <span><fmt:message key="jtrial.loginform.text"/></span>
-            <ui:isLoginError var="loginResult">
-                <span class="error"><fmt:message key="${loginResult == 'account_locked' ? 'message.accountLocked' : 'message.invalidUsernamePassword'}"/></span>
-            </ui:isLoginError>
-            <c:if test="${not empty param['loginError']}">
-                <span class="error"><fmt:message key="${param['loginError'] == 'account_locked' ? 'message.accountLocked' : 'message.invalidUsernamePassword'}"/></span>
-            </c:if>
+    <ui:loginArea class="loginForm jtrial-form jtrial-banner gray" onsubmit="loginButton.disabled = true; return true;">
+        <h3 class="no-marginTop"><fmt:message key="jtrial.loginform.title"/></h3>
+        <span><fmt:message key="jtrial.loginform.text"/></span>
+        <ui:isLoginError var="loginResult">
+            <span class="error"><fmt:message key="${loginResult == 'account_locked' ? 'message.accountLocked' : 'message.invalidUsernamePassword'}"/></span>
+        </ui:isLoginError>
+        <c:if test="${not empty param['loginError']}">
+            <span class="error"><fmt:message key="${param['loginError'] == 'account_locked' ? 'message.accountLocked' : 'message.invalidUsernamePassword'}"/></span>
+        </c:if>
 
 
-            <p>
-                <label for="username"><fmt:message key="label.username"/>:</label>
-                <input type="text" value="" tabindex="1" maxlength="250" name="username" id="username"/>
-            </p>
+        <p>
+            <label class="jtrial-label" for="username"><fmt:message key="label.username"/></label>
+            <input class="jtrial-input" type="text" value="" tabindex="1" maxlength="250" name="username" id="username"/>
+        </p>
 
-            <p>
-                <label for="password"><fmt:message key="label.password"/>:</label>
-                <input type="password" tabindex="2" maxlength="250" name="password" id="password" autocomplete="off"/>
-            </p>
+        <p>
+            <label class="jtrial-label" for="password"><fmt:message key="label.password"/></label>
+            <input class="jtrial-input" type="password" tabindex="2" maxlength="250" name="password" id="password" autocomplete="off"/>
+        </p>
 
-            <p>
-                <input type="checkbox" id="rememberme" name="useCookie"/>
-                <label for="rememberme" class="rememberLabel"><fmt:message key="jtrial.loginform.rememberMe.label"/></label>
+        <p>
+            <input type="checkbox" id="rememberme" name="useCookie"/>
+            <label for="rememberme" class="rememberLabel"><fmt:message key="jtrial.loginform.rememberMe.label"/></label>
 
-            </p>
+        </p>
 
-            <div class="divButton">
-                <input type="submit" name="loginButton" class="jtrial-button" value="<fmt:message key='loginForm.loginbutton.label'/>"/>
-            </div>
-        </ui:loginArea>
-    </div>
+        <div class="jtrial-formFooter">
+            <input type="submit" name="loginButton" class="jtrial-button big fullWidth" value="<fmt:message key='loginForm.loginbutton.label'/>"/>
+        </div>
+    </ui:loginArea>
 </c:if>
 
 <c:if test="${renderContext.loggedIn &&  !(currentAliasUser.username eq 'guest')}">
