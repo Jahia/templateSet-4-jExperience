@@ -40,6 +40,6 @@
         <main class="jtrial-main">
             <template:area path="pagecontent"/>
         </main>
-        <template:addResources type="javascript" resources="jtrail-jExp-main.js" targetTag="body"/>
+        <template:addResources type="javascript" resources="jtrail-jExp-main.js"/>
     </body>
 </html>
