@@ -5,7 +5,7 @@
                                  j:installedModules="templateSet-4-jExperience"
                                  j:modulePriority="0"
                                  j:moduleType="templatesSet"
-                                 j:title="TemplateSet for jExperience"
+                                 j:title="jExperience Demo"
                                  jcr:primaryType="jnt:module">
          <portlets jcr:primaryType="jnt:portletFolder"/>
          <files jcr:primaryType="jnt:folder"/>
