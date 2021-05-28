@@ -53,7 +53,7 @@
   </parent>
   <groupId>org.jahia.modules</groupId>
   <artifactId>templateSet-4-jExperience</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>Create experiences</name>
   <description>Template set for jExperience projects.</description>
@@ -61,7 +61,7 @@
     <connection>scm:git:git@github.com:Jahia/templateSet-4-jExperience.git</connection>
     <developerConnection>scm:git:git@github.com:Jahia/templateSet-4-jExperience.git</developerConnection>
     <url>https://github.com/Jahia/templateSet-4-jExperience</url>
-    <tag>templateSet-4-jExperience-1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
   <properties>
     <jahia-module-signature>MCwCFCt/a2siFjl/7SkWHN45uKZ5AFGfAhR8F31Ba28EBdQpKWpUjTE42SqBcQ==</jahia-module-signature>
