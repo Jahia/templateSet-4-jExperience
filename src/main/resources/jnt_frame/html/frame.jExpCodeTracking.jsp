@@ -17,12 +17,12 @@
 
         <p>
             <label class="jtrial-label" for="username"><fmt:message key="label.username"/></label>
-            <input class="jtrial-input" type="text" value="" tabindex="1" maxlength="250" name="username" id="username"/>
+            <input class="jtrial-input fullWidth" type="text" value="" tabindex="1" maxlength="250" name="username" id="username"/>
         </p>
 
         <p>
             <label class="jtrial-label" for="password"><fmt:message key="label.password"/></label>
-            <input class="jtrial-input" type="password" tabindex="2" maxlength="250" name="password" id="password" autocomplete="off"/>
+            <input class="jtrial-input fullWidth" type="password" tabindex="2" maxlength="250" name="password" id="password" autocomplete="off"/>
         </p>
 
         <p>
