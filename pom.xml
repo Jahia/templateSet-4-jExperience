@@ -56,8 +56,8 @@
   <artifactId>templateSet-4-jExperience</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
-  <name>jExperience Demo</name>
-  <description>This is the custom profile module (jExperience Demo) for running on a Jahia server.</description>
+  <name>Create experiences</name>
+  <description>Template set for jExperience projects.</description>
   <scm>
     <connection>scm:git:git@github.com:Jahia/templateSet-4-jExperience.git</connection>
     <developerConnection>scm:git:git@github.com:Jahia/templateSet-4-jExperience.git</developerConnection>
