@@ -35,6 +35,11 @@
     </head>
 
     <body>
+        <c:if test="${renderContext.loggedIn && !(currentAliasUser.username eq 'guest')}">
+            <div class="jtrial-adminBar flexRow alignCenter">
+                <template:area path="admincontent"/>
+            </div>
+        </c:if>
         <header class="jtrial-site-header alignCenter flexRow_between">
             <template:area path="headercontent"/>
         </header>
