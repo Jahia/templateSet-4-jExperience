@@ -21,4 +21,9 @@
  - j:style (string)
  - width (string) = '100%'
  - height (string)
+ 
+ [t4jnt:topLink] > jnt:content, jmix:nodeReference, jmix:siteComponent, jmix:editorialContent, mix:title
+ - j:link (string) indexed=no mandatory
+ - icon (weakreference, picker[type='image']) internationalized < 'jmix:image'
+ 
 

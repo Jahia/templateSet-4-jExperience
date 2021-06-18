@@ -36,7 +36,7 @@
 
     <body>
         <c:if test="${renderContext.loggedIn && !(currentAliasUser.username eq 'guest')}">
-            <div class="jtrial-adminBar flexRow alignCenter">
+            <div class="jtrial-adminBar flexRow alignCenter ${renderContext.editMode ? "edit" : ""}">
                 <template:area path="admincontent"/>
             </div>
         </c:if>

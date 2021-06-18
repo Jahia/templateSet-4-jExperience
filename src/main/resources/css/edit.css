@@ -1,3 +1,6 @@
 .jahia-template-gxt[type=absoluteArea] {
     width: 100%;
 }
+.jtrial-adminBar.edit{
+    min-height: 100px;
+}
