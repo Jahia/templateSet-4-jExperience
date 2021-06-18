@@ -1,10 +1,12 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="template" uri="http://www.jahia.org/tags/templateLib" %>
 <%@ taglib prefix="jcr" uri="http://www.jahia.org/tags/jcr" %>
 <%@ taglib prefix="utility" uri="http://www.jahia.org/tags/utilityLib" %>
 
 <nav class="flexFluid">
     <ol class="flexRow alignCenter">
+        <template:area path="toplinkcontent"/>
         <li class="flexRow alignCenter jtrial-adminBar_item">
             <img class="jtrial-adminBar_itemIcon_home" src="${url.context}/modules/templateSet-4-jExperience/img/assets/homeIcon.svg"/>
         </li>
