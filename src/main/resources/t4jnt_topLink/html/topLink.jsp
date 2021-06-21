@@ -17,7 +17,7 @@
 <c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
 <c:set var="link" value="${currentNode.properties['j:link'].string}"/>
 <c:set var="iconNode" value="${currentNode.properties['icon'].node}"/>
-<c:url var="iconURL" value="${iconNode.url}"/>
+<c:url var="iconURL" value="${iconNode.url}" context="/"/>
 <c:set var="classIcon" value="${empty title ? 'big' : ''}"/>
 
 <li class="jtrial-adminBar_item">

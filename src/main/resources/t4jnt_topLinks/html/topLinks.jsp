@@ -1,6 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="template" uri="http://www.jahia.org/tags/templateLib" %>
 <%@ taglib prefix="jcr" uri="http://www.jahia.org/tags/jcr" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 
 <c:set var="items" value="${jcr:getChildrenOfType(currentNode, 't4jnt:topLink')}"/>
 
@@ -22,6 +24,6 @@
 <div class="jtrial-adminBar_userActions">
     <span class="jtrial-adminBar_user">${renderContext.user.name}</span>
     <div class="jtrial-adminBar_userMenu">
-        <a href="${url.logout}" class="jtrial-adminBar_userMenuItem">Log out</a>
+        <a href="${url.logout}" class="jtrial-adminBar_userMenuItem"><fmt:message key='jtrial.adminBar.logout'/></a>
     </div>
 </div>
