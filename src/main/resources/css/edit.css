@@ -2,5 +2,15 @@
     width: 100%;
 }
 .jtrial-adminBar.edit{
-    min-height: 100px;
+    min-height: 125px;
+}
+.jtrial-adminBar.edit nav ol > div {
+    margin-left:32px;
+}
+.jtrial-adminBar.edit nav ol > div:first-child {
+    margin-left:0px;
+}
+
+.jtrial-adminBar.edit > div > div > div > div > div > div > div {
+    display: flex !important;
 }

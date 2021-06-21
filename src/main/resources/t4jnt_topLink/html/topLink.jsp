@@ -4,11 +4,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="jcr" uri="http://www.jahia.org/tags/jcr" %>
-<%@ taglib prefix="ui" uri="http://www.jahia.org/tags/uiComponentsLib" %>
-<%@ taglib prefix="functions" uri="http://www.jahia.org/tags/functions" %>
-<%@ taglib prefix="query" uri="http://www.jahia.org/tags/queryLib" %>
-<%@ taglib prefix="utility" uri="http://www.jahia.org/tags/utilityLib" %>
-<%@ taglib prefix="s" uri="http://www.jahia.org/tags/search" %>
+
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="out" type="java.io.PrintWriter"--%>
 <%--@elvariable id="script" type="org.jahia.services.render.scripting.Script"--%>
@@ -26,7 +22,9 @@
 
 <li class="jtrial-adminBar_item">
     <a href="${link}" class="flexRow alignCenter">
-        <img class="jtrial-adminBar_itemIcon ${classIcon}" src="${iconURL}"/>
+        <c:if test="${not empty iconURL}">
+            <img class="jtrial-adminBar_itemIcon ${classIcon}" src="${iconURL}"/>
+        </c:if>
         <c:if test="${not empty title}">
             <span>${title}</span>
         </c:if>
