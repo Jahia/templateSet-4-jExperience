@@ -1,0 +1,41 @@
+.jtrial-form {
+    .error {
+        display: block;
+        color: $color-danger;
+    }
+
+    &.loginForm {
+        max-width: 450px;
+        margin: spacing('large') auto;
+    }
+}
+
+.jtrial-label {
+    display: block;
+    font-size: 14px;
+    color: $color-gray4;
+    margin-bottom: 4px;
+}
+
+.jtrial-input {
+    border: 1px solid $color-gray3;
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+
+    &:hover {
+        border-color: $color-gray4;
+    }
+
+    &:focus {
+        border-color: $color-accent;
+    }
+
+    &.fullWidth {
+        width: 100%;
+    }
+}
+
+.jtrial-formFooter {
+    margin-top: spacing('large');
+}

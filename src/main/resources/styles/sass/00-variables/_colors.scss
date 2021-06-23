@@ -1,0 +1,44 @@
+//---
+// Color palettes
+//---
+$color-gray0: #f8f9fa;
+$color-gray1: #e9ecef;
+$color-gray2: #ced4da;
+$color-gray3: #868e96;
+$color-gray4: #343a40;
+
+$color-light: #fdfdfd;
+$color-dark: #222;
+
+$color-accentLight: #f6fafd;
+$color-accent: #00a0e3;
+$color-accentDark: #286090;
+
+$color-pink: #d63384;
+
+$color-successLight: #e6fcf5;
+$color-success: #20c997;
+$color-successDark: #099268;
+
+$color-warningLight: #fff4e6;
+$color-warning: #fcc419;
+$color-warningDark: #f08c00;
+
+$color-dangerLight: #fff5f5;
+$color-danger: #fa5252;
+$color-dangerDark: #c92a2a;
+
+// ---
+// Text
+// ---
+$color-textLight: $color-gray0;
+$color-text: $color-gray4;
+$color-textDark: $color-dark;
+$color-code: $color-pink;
+
+// ---
+// Shadows
+// ---
+$color-shadow: rgba($color-accentDark, 0.1);
+$color-shadowDark: rgba($color-accentDark, 0.4);
+$color-shadowNeutral: rgba($color-gray4, 0.4);

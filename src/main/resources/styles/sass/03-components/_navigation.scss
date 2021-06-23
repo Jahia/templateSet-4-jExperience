@@ -1,0 +1,98 @@
+// For jahia component
+.navbar {
+    a {
+        display: inline-block;
+        color: $color-text;
+        text-decoration: none;
+        transition: background 0.2s ease;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 300px;
+    }
+
+    li.selected {
+        cursor: default;
+        font-weight: bold;
+    }
+}
+
+.navmenu.level_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+
+    > li {
+        & + li {
+            margin-left: spacing('big');
+        }
+
+        & > a {
+            border-radius: 24px;
+            padding: spacing('small') spacing('large');
+
+            &:hover:not(.selected) {
+                color: $color-textDark;
+                background-color: $color-gray1;
+            }
+        }
+    }
+
+    &.inPath {
+        font-weight: bold;
+    }
+
+    .hasChildren {
+        position: relative;
+
+        & > a:after {
+            content: '▼';
+            margin-left: spacing('small');
+            font-size: 9px;
+            color: $color-gray3;
+            opacity: 0.6;
+        }
+    
+        &:hover {
+            .box-inner {
+                visibility: visible;
+                opacity: 1;
+                top: 30px;
+            }
+        }
+    }
+
+    .box-inner {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        transition: top 0.4s ease-out;
+        padding: spacing('medium');
+        top: 45px;
+        right: - #{spacing('medium')};
+        min-width: calc(100% + #{spacing('medium')} * 2);
+
+        .navmenu {
+            padding: spacing('medium');
+            background-color: $color-light;
+            border-radius: 2px;
+            box-shadow: $shadow-menu;
+        }
+    }
+}
+
+.navmenu.level_2 {
+    a {
+        width: 100%;
+        max-width: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 4px 0;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+}

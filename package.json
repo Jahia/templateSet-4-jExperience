@@ -1,0 +1,10 @@
+{
+    "name": "templateSet-4-jExperience",
+    "version": "1.0.0",
+    "scripts": {
+        "build:css": "sass src/main/resources/styles/sass:src/main/resources/styles/css --no-source-map --style=compressed"
+    },
+    "devDependencies": {
+        "sass": "^1.35.1"
+    }
+}

@@ -67,6 +67,8 @@
     <jahia-module-signature>MCwCFCt/a2siFjl/7SkWHN45uKZ5AFGfAhR8F31Ba28EBdQpKWpUjTE42SqBcQ==</jahia-module-signature>
 <!--    <jahia-module-type>system</jahia-module-type>-->
     <jahia-depends>default,jexperience</jahia-depends>
+    <yarn.arguments>build:css</yarn.arguments>
+    <require-capability>osgi.extender;filter:="(osgi.extender=org.jahia.bundles.blueprint.extender.config)"</require-capability>
   </properties>
   <repositories>
     <repository>
@@ -106,6 +108,43 @@
             <Jahia-Static-Resources>/css,/fonts,/javascript,/images,/icons,/img</Jahia-Static-Resources>
           </instructions>
         </configuration>
+      </plugin>
+      <!-- Run yarn command -->
+      <plugin>
+          <groupId>com.github.eirslett</groupId>
+          <artifactId>frontend-maven-plugin</artifactId>
+          <version>1.6</version>
+          <!-- executions go here -->
+          <executions>
+              <execution>
+                  <id>npm install node and yarn</id>
+                  <phase>generate-resources</phase>
+                  <goals>
+                      <goal>install-node-and-yarn</goal>
+                  </goals>
+                  <configuration>
+                      <nodeVersion>v11.15.0</nodeVersion>
+                      <yarnVersion>v1.12.3</yarnVersion>
+                  </configuration>
+              </execution>
+              <execution>
+                  <id>yarn install</id>
+                  <phase>generate-resources</phase>
+                  <goals>
+                      <goal>yarn</goal>
+                  </goals>
+              </execution>
+              <execution>
+                  <id>yarn build css</id>
+                  <phase>generate-resources</phase>
+                  <goals>
+                      <goal>yarn</goal>
+                  </goals>
+                  <configuration>
+                      <arguments>${yarn.arguments}</arguments>
+                  </configuration>
+              </execution>
+          </executions>
       </plugin>
     </plugins>
   </build>
