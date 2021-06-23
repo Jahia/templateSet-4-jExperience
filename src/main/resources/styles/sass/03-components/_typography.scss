@@ -1,0 +1,38 @@
+.jtrial-h1 {
+    font-size: 44px;
+}
+
+.jtrial-h2 {
+    font-size: 32px;
+    font-weight: 400;
+    color: $color-accent;
+    margin-bottom: 1rem;
+}
+
+.jtrial-h3 {
+    font-size: 24px;
+}
+
+.jtrial-pre {
+    padding: spacing('medium');
+    background: $color-gray4;
+    color: $color-textLight;
+    border-radius: 4px;
+    overflow: auto;
+}
+
+.jtrial-code {
+    background-color: $color-gray0;
+    border-radius: 4px;
+    // padding: 0 spacing('small');
+    color: $color-code;
+}
+
+.jtrial-link {
+    color: $color-accent;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $color-accentDark;
+    }
+}

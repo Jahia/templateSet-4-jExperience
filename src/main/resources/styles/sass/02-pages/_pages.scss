@@ -1,0 +1,23 @@
+.jtrial-main {
+    padding: spacing('big');
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto spacing('big');
+    border-radius: 4px;
+    background-color: $color-light;
+    box-shadow: $shadow-box;
+
+    :first-child {
+        margin-top: 0;
+    }
+
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.jtrial-section {
+    + .jtrial-section {
+        margin-top: spacing('huge');
+    }
+}

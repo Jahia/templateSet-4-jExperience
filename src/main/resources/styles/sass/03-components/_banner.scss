@@ -1,0 +1,33 @@
+.jtrial-banner {
+    padding: spacing('medium');
+    border: 1px dotted $color-accent;
+    background-color: $color-accentLight;
+    color: $color-accentDark;
+    border-radius: 4px;
+
+    margin: spacing('medium') 0;
+
+    &.orange {
+        border-color: $color-warning;
+        background-color: $color-warningLight;
+        color: $color-warningDark;
+    }
+
+    &.green {
+        border-color: $color-success;
+        background-color: $color-successLight;
+        color: $color-successDark;
+    }
+
+    &.red {
+        border-color: $color-danger;
+        background-color: $color-dangerLight;
+        color: $color-dangerDark;
+    }
+
+    &.gray {
+        border-color: $color-gray3;
+        background-color: $color-gray0;
+        color: $color-gray4;
+    }
+}

@@ -1,0 +1,27 @@
+.jtrial-site-header {
+    padding: spacing('medium') spacing('huge');
+    background: $color-light;
+    box-shadow: $shadow-box;
+    margin-bottom: spacing('big');
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.jtrial-logo {
+    margin: 0;
+    width: 70px;
+}
+
+
+.has-adminBar {
+    .jtrial-site-header {
+        top: 40px;
+    }
+}

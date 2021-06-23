@@ -1,0 +1,55 @@
+.jtrial-button {
+    cursor: pointer;
+    border: none;
+    background-color: #007cb0;
+    color: $color-textLight;
+    font-size: 14px;
+    border-radius: 2px;
+    padding: spacing('small') spacing('medium');
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+        //
+        color: $color-textLight;
+        background-color: $color-accentDark;
+    }
+
+    &.small {
+        padding: spacing('small');
+        font-size: 12px;
+    }
+
+    &.big {
+        padding: spacing('small') spacing('large');
+        font-size: 18px;
+    }
+
+    &.fullWidth {
+        width: 100%;
+    }
+
+    &[name='loginButton'] {
+        border-radius: 40px;
+    }
+
+    &[target='_blank'] {
+        padding-right: 40px;
+        background-image: url("data:image/svg+xml,%3Csvg fill='rgba(255, 255, 255, .8)' height='24' viewbox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z'%3E%3C/path%3E%3C/svg%3E");
+        background-size: 18px;
+        background-repeat: no-repeat;
+        background-position: center right spacing('medium');
+    }
+}
+
+.jtrial-button {
+    &.icon-copy {
+        padding-left: 40px;
+        // background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.46 3.79999H15.28C14.86 2.63999 13.76 1.79999 12.46 1.79999C11.16 1.79999 10.06 2.63999 9.63996 3.79999H5.45996C4.35996 3.79999 3.45996 4.69999 3.45996 5.79999V21.8C3.45996 22.9 4.35996 23.8 5.45996 23.8H19.46C20.56 23.8 21.46 22.9 21.46 21.8V5.79999C21.46 4.69999 20.56 3.79999 19.46 3.79999ZM12.4599 3.8C13.0099 3.8 13.4599 4.25 13.4599 4.8C13.4599 5.35 13.0099 5.8 12.4599 5.8C11.9099 5.8 11.4599 5.35 11.4599 4.8C11.4599 4.25 11.9099 3.8 12.4599 3.8ZM19.46 21.8H5.46001V5.79998H7.46001V8.79998H17.46V5.79998H19.46V21.8Z' fill='white'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='white' %3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/%3E%3C/svg%3E");
+        background-size: 18px;
+        background-repeat: no-repeat;
+        background-position: spacing('medium') center;
+    }
+}

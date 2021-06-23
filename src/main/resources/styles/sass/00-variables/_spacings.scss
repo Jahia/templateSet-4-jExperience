@@ -1,0 +1,18 @@
+$spacings: (
+    'nano': 4px,
+    'small': 8px,
+    'medium': 16px,
+    'large': 24px,
+    'big': 32px,
+    'huge': 40px,
+);
+
+@function spacing($spacingName) {
+    @if map-has-key($spacings, $spacingName) {
+        @return map-get($spacings, $spacingName);
+    }
+
+    @warn "The key #{$spacingName} is not in the map ’$spacingName’";
+
+    @return null;
+}

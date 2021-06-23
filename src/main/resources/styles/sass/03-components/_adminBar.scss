@@ -1,0 +1,112 @@
+$adminBar-height: 40px;
+$adminBar-color: $color-gray2;
+
+// You can generate filter by using this tool: https://codepen.io/sosuke/pen/Pjoqqp
+$filter-gray2: invert(98%) sepia(1%) saturate(3961%) hue-rotate(179deg) brightness(90%) contrast(88%);
+$filter-light: invert(99%) sepia(99%) saturate(0%) hue-rotate(277deg) brightness(102%) contrast(98%);
+
+.jtrial-adminBar {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    background-color: $color-dark;
+    color: $adminBar-color;
+    height: $adminBar-height;
+    font-size: 14px;
+    padding-right: 24px;
+    padding-left: 24px;
+    
+    ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.jtrial-adminBar_user {
+    align-self: flex-end;
+    height: $adminBar-height;
+    cursor: pointer;
+    
+    &:after {
+        content: '▼';
+        margin-left: spacing('small');
+        font-size: 9px;
+        color: $color-gray1;
+        opacity: 0.6;
+    }
+
+
+}
+
+.jtrial-adminBar_item {
+    & + .jtrial-adminBar_item {
+        margin-left: spacing('big');
+    }
+
+    &:hover {
+        color: $color-gray0;
+    }
+}
+
+.jtrial-adminBar_itemIcon {
+    margin-right: spacing('nano');
+    width: 18px;
+    height: 18px;
+    filter: $filter-gray2;
+}
+
+.jtrial-adminBar_itemIcon.big {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    filter: $filter-gray2;
+
+    &:hover {
+        filter: $filter-light;
+    }
+}
+
+.jtrial-adminBar_userMenu {
+    visibility: hidden;
+    color: $color-dark;
+    opacity: 0;
+    position: absolute;
+    transition: top 0.4s ease-out;
+    padding: spacing('medium');
+    top: 45px;
+    right: 0;
+    min-width: 80px;
+    z-index: 9999;
+    background-color: $color-light;
+    border-radius: 2px;
+    box-shadow: $shadow-menu;
+}
+
+.jtrial-adminBar_userActions {
+    position: relative;
+    padding: 8px 0;
+
+    &:hover {
+        color: $color-light;
+
+        .jtrial-adminBar_userMenu {
+            visibility: visible;
+            opacity: 1;
+            top: 35px;
+        }
+    }
+}
+
+.jtrial-adminBar_userMenuItem {
+    display: block;
+
+    &:hover {
+        color: $color-accent;
+    }
+}

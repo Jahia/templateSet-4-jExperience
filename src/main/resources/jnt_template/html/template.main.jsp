@@ -26,7 +26,7 @@
         <%--<c:if test="${renderContext.editMode}">--%>
         <%--    <template:addResources type="css" resources="edit.css" />--%>
         <%--</c:if>--%>
-        <template:addResources type="css" resources="style.min.css"/>
+        <template:addResources type="css" resources="style.css"/>
         <c:if test="${renderContext.editMode}">
             <template:addResources type="css" resources="edit.css"/>
         </c:if>
