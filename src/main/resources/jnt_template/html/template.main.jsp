@@ -13,6 +13,8 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
+<c:set var="hasAdminBar" value="${renderContext.loggedIn && !(currentAliasUser.username eq 'guest')}"/>
+
 <html lang="${fn:substring(renderContext.request.locale,0,2)}">
     <head>
         <title>${fn:escapeXml(renderContext.mainResource.node.displayableName)}</title>
@@ -34,8 +36,8 @@
         <template:addResources type="javascript" resources="main.js" async="true"/>
     </head>
 
-    <body>
-        <c:if test="${renderContext.loggedIn && !(currentAliasUser.username eq 'guest')}">
+    <body class="${hasAdminBar ? 'has-adminBar' : ''}">
+        <c:if test="${hasAdminBar}">
             <div class="jtrial-adminBar flexRow alignCenter ${renderContext.editMode ? "edit" : ""}">
                 <template:area path="admincontent"/>
             </div>
