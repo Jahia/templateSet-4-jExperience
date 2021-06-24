@@ -53,7 +53,7 @@
   </parent>
   <groupId>org.jahia.modules</groupId>
   <artifactId>templateSet-4-jExperience</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>Create experiences</name>
   <description>Template set for jExperience projects.</description>
@@ -64,7 +64,7 @@
     <tag>HEAD</tag>
   </scm>
   <properties>
-    <jahia-module-signature>MCwCFCt/a2siFjl/7SkWHN45uKZ5AFGfAhR8F31Ba28EBdQpKWpUjTE42SqBcQ==</jahia-module-signature>
+    <jahia-module-signature>MCwCFGmglAgbLXmqcpg99X6cuVJm07lPAhR21JiVkDvs3uEb+js6bAJ1SXYaQQ==</jahia-module-signature>
     <jahia-module-type>system</jahia-module-type>
     <jahia-depends>default,jexperience</jahia-depends>
   </properties>
