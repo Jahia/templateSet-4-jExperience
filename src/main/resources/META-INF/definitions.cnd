@@ -21,9 +21,11 @@
  - j:style (string)
  - width (string) = '100%'
  - height (string)
+ 
+[t4jnt:topLinks] > jnt:content, jmix:list, jmix:siteComponent, jmix:editorialContent orderable
+ + * (t4jnt:topLink)
+ 
+[t4jnt:topLink] > jnt:content, mix:title
+ - j:link (string) mandatory indexed=no
+ - icon (weakreference, picker[type='image']) internationalized < 'jmix:image'
 
-[t4jnt:doc] > jnt:content, jmix:basicContent, jmix:editorialContent
- - content (string, richtext[ckeditor.toolbar='Tinny',ckeditor.customConfig='$context/modules/templateSet-4-jExperience/javascript/ckeditor/config/default.js'])
-
-[t4jnt:personalizationRef] > jnt:content, jmix:basicContent, jmix:editorialContent
- - personalization (weakreference) < 'wemnt:personalizedContent'
